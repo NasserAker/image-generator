@@ -1,5 +1,10 @@
 import streamlit as st # type: ignore
 from together import Together # type: ignore
+import os
+
+
+client = Together(api_key=os.getenv("d14eb566adc1299d8154051505c71486b320e8057a0f06e07dbaf7333c0903d5"))
+
 
 st.title("AI Image Generator 🖼️")
 st.write("Enter a prompt to generate an AI-generated image.")
@@ -7,7 +12,8 @@ st.write("Enter a prompt to generate an AI-generated image.")
 # User input
 prompt = st.text_input("Enter your prompt:", "A futuristic city skyline at sunset")
 
-client = Together()
+
+
 
 if st.button("Generate Image"):
     if prompt:
