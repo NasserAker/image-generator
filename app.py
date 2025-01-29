@@ -1,3 +1,8 @@
+import streamlit as st # type: ignore
+from together import Together  # type: ignore
+import os
+
+
 import streamlit as st
 import os
 import base64
