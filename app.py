@@ -1,9 +1,9 @@
 import os
 import streamlit as st 
-from together import Together  
+from together import Together 
 
 
-client = Together(api_key=os.getenv("d14eb566adc1299d8154051505c71486b320e8057a0f06e07dbaf7333c0903d5"))
+client = Together(api_key="d14eb566adc1299d8154051505c71486b320e8057a0f06e07dbaf7333c0903d5")
 
 
 st.title("AI Image Generator 🖼️")
