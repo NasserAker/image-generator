@@ -22,7 +22,7 @@ if st.button("Generate Image"):
                 response = client.images.generate(
                     prompt=prompt,
                     model="black-forest-labs/FLUX.1-schnell-Free",
-                    steps=4,
+                    steps=1,
                     n=4
                 )
 
