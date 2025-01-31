@@ -1,11 +1,7 @@
 from io import BytesIO
 import os
 import requests
-
-
-
-
-from streamlit import st
+import streamlit as st
 from together import Together
 
 # Initialize Together client
