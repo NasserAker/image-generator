@@ -6,7 +6,7 @@ from together import Together
 
 
 # Initialize Together client
-client = Together(api_key=os.environ.get("TOGETHER_API_KEY"))
+client = Together(api_key="d14eb566adc1299d8154051505c71486b320e8057a0f06e07dbaf7333c0903d5")
 
 st.title("AI Image Generator 🖼️")
 st.write("Enter a prompt to generate an AI-generated image.")
