@@ -1,6 +1,6 @@
 from io import BytesIO
 import os
-from turtle import st
+from streamlit import st
 import requests
 from together import Image, Together
 
