@@ -2,13 +2,13 @@ from io import BytesIO
 import os
 import requests
 import streamlit as st
-from together import Together
+# from together import Together
 
 # # Initialize Together client
 # client = Together(api_key=os.environ.get("TOGETHER_API_KEY"))
 
-# st.title("AI Image Generator 🖼️")
-# st.write("Enter a prompt to generate an AI-generated image.")
+st.title("AI Image Generator 🖼️")
+st.write("Enter a prompt to generate an AI-generated image.")
 
 # # User input
 # prompt = st.text_input("Enter your prompt:", "A futuristic city skyline at sunset")
