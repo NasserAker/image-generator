@@ -22,7 +22,7 @@ if st.button("Generate Image"):
                 response = client.images.generate(
                     prompt=prompt,
                     model="black-forest-labs/FLUX.1-schnell-Free",
-                    steps=1,
+                    steps=4,
                     n=4
                 )
                 if(response.data):
@@ -30,14 +30,6 @@ if st.button("Generate Image"):
                     # Display the generated image
                     st.image(image_url, caption="Generated Image", use_container_width=True)
 
-                    #a download button
-                    img_data = requests.get(image_url).content
-                    st.download_button(
-                        label="Download Image",
-                        data=img_data,
-                        file_name="generated_image.png",
-                        mime="image/png"
-                    )
                 else:
                     st.error("No image found.")
 
