@@ -69,7 +69,7 @@ if st.button("Generate Image"):
                 if(response.data):
                     image_url = response.data[0].url  
                     # Display the generated image
-                    st.image(image_url, caption="Generated Image", use_column_width=True)
+                    st.image(image_url, caption="Generated Image", use_container_width=True)
 
                     #     # Optional: Add a download button
                     # img_data = requests.get(image_url).content
