@@ -66,30 +66,22 @@ if st.button("Generate Image"):
                     steps=1,
                     n=4
                 )
+                if(response.data):
+                    image_url = response.data[0].url  
+                    # Display the generated image
+                    st.image(image_url, caption="Generated Image", use_column_width=True)
 
-                # Print the response to check its structure
-                st.write(response)  # This will help you inspect the structure of the response
-                
-                # Assuming the response is a dictionary with a "data" key containing a list of results
-                if "data" in response and isinstance(response["data"], list) and len(response["data"]) > 0:
-                    image_url = response["data"][0].get("url", None)
-                    
-                    if image_url:
-                        # Display the generated image
-                        st.image(image_url, caption="Generated Image", use_column_width=True)
-
-                        # Optional: Add a download button
-                        img_data = requests.get(image_url).content
-                        st.download_button(
-                            label="Download Image",
-                            data=img_data,
-                            file_name="generated_image.png",
-                            mime="image/png"
-                        )
-                    else:
-                        st.error("No image URL found in the response.")
+                    #     # Optional: Add a download button
+                    # img_data = requests.get(image_url).content
+                    # st.download_button(
+                    #     label="Download Image",
+                    #     data=img_data,
+                    #     file_name="generated_image.png",
+                    #     mime="image/png"
+                    # )
                 else:
-                    st.error("Unexpected response format or no data found.")
+                    st.error("No image found.")
+
 
             except Exception as e:
                 st.error(f"Error: {e}")
